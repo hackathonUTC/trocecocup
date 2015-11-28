@@ -1,4 +1,3 @@
-<?php require_once('class/CONF.class.php'); ?>
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
@@ -13,7 +12,8 @@
 
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav navbar-right">
-        <li <?php CONF::activeLink($navbar, 'catalogue'); ?>><a href="index.php">Catalogue</a></li>
+        <li <?php CONF::activeLink($navbar, 'catalogue'); ?>><a href="<?php echo $accessPath; ?>">Catalogue</a></li>
+        <li <?php CONF::activeLink($navbar, 'collection'); ?>><a href="<?php echo $accessPath.'view/collection.php'; ?>">Collection</a></li>
       </ul>
     </div><!--/.nav-collapse -->
   </div>

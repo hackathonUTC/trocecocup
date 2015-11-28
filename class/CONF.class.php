@@ -6,7 +6,8 @@ class CONF
       if(isset($navbar) AND isset($page))
       {
   			if($navbar == $page)
-  				echo 'class="active"'; 
+  				echo 'class="active"';
   		}
     }
 }
+?>
