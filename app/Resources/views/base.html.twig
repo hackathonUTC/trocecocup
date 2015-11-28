@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html lang="{{ app.request.locale }}">
+    <head>
+        {% block meta %}
+            <meta charset="UTF-8" />
+            <meta name="copyright" content="UTC">
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+        {% endblock %}
+        <title>{% block title %}EcoTroc{% endblock %}</title>
+        {% block stylesheets %}
+
+            <link href="{{ asset('css/profil.css') }}" rel="stylesheet" type="text/css" />
+        {% endblock %}
+        <link rel="search" type="application/opensearchdescription+xml" href="{{ asset('opensearch/business.xml') }}" title="Proviness">
+    </head>
+    <body>
+        {% include '::header.html.twig' %}
+        <div id="content-wrapper" >
+
+            <main id="inside-content">
+                {% block body %}
+                {% endblock %}
+            </main>
+        </div>
+        {% include '::footer.html.twig' %}
+        {% block javascripts %}
+
+        {% endblock %}
+    </body>
+</html>
+
