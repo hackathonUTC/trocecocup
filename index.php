@@ -5,11 +5,7 @@ require_once('controleur/core/cas.php');
 include_once ('config.php');
 session_start();
 
-if (isset($_SESSION['user'])) //Si les infos user sont OK, on affiche la page
-{
-    include ('vue/core/index.php');
-}
-else
+if (!isset($_SESSION['user'])) //Si les infos user sont OK, on affiche la page
 {
     $cas = new Cas("https://cas.utc.fr/cas/", "http://localhost/trocecocup");
     $user = $cas->authenticate();
@@ -20,6 +16,9 @@ else
     {
         $_SESSION['user'] = $user;
         unset($_GET['ticket']);
+        $url = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+        $url = strtok($url, '?');
+        header("Location: " . $url . "?section=accueil");
     }
 }
 
@@ -31,6 +30,11 @@ if ( isset($_GET['section']) AND $_GET['section'] == 'test')
 if ( isset($_GET['section']) AND $_GET['section'] == 'logout')
 {
     include_once('controleur/core/logout.php');
+}
+
+if ( isset($_GET['section']) AND $_GET['section'] == 'accueil')
+{
+    include_once('controleur/core/accueil.php');
 }
 
 if (!isset($_GET['section']) OR $_GET['section'] == 'index')
