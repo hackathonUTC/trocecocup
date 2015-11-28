@@ -1,24 +1,22 @@
 <?php
+
+require_once 'controleur/core/xmlToArrayParser.class.php';
+
 class CAS
 {
-  const URL = "https://cas.utc.fr/cas/";
+  const URL = 'https://cas.utc.fr/cas/';
 
-  public static function auth()
+  public static function authenticate()
   {
-    if (!isset($_GET['ticket']) || empty($_GET['ticket']))
-      return -1; //Si pas de ticket, on sort de la fonction
-    else
-    {
-      $data = file_get_contents(self::URL."serviceValidate?ticket=".$_GET['ticket']."service=http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);
+    if (!isset($_GET['ticket']) || empty($_GET['ticket'])) return -1;
 
-      if(empty($data))
-        return -1;
-      else
-      {
-        return 1;
-        //TODO : Parser XML -> Array
-      }
-    }
+    $data = file_get_contents(self::URL.'serviceValidate?service=http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'].'&ticket='.$_GET['ticket']);
+
+    if (empty($data)) return -1;
+
+    $parsed = new xmlToArrayParser($data);
+    if (!isset($parsed->array['cas:serviceResponse']['cas:authenticationSuccess']['cas:user'])) return -1;
+    return $parsed->array['cas:serviceResponse']['cas:authenticationSuccess']['cas:user'];
   }
 
   public static function login()
