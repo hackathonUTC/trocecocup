@@ -9,7 +9,7 @@
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="#">
-        <img src="./includes/img/logo.png" alt="Logo Switch Cup" />
+        <img src="./includes/img/Logo.png" alt="Logo Switch Cup" />
       </a>
     </div>
 
