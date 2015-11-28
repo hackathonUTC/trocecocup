@@ -3,7 +3,7 @@
   session_start();
 
 
-
+include_once ('config.php');
 include ('vue/core/index.php');
 /*
   if (isset($_SESSION['$user'])) //Si les infos user sont OK, on affiche la page
@@ -27,4 +27,3 @@ include ('vue/core/index.php');
     }
   }
 */
-

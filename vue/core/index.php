@@ -9,7 +9,7 @@
     <title>SwitchCup</title>
 
     <!-- Bootstrap -->
-    <link href="../../includes/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="includes/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   </head>
   <body>
     <?php
@@ -18,8 +18,8 @@
     ?>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="../../includes/jquery/js/jquery.js"></script>
+    <script src="includes/jquery/js/jquery.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="../../includes/bootstrap/js/bootstrap.min.js"></script>
+    <script src="includes/bootstrap/js/bootstrap.min.js"></script>
   </body>
 </html>
