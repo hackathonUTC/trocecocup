@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="fr">
   <head>
@@ -10,7 +9,7 @@
 
     <!-- Bootstrap -->
     <link href="includes/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="includes/bootstrap/css/app.css" rel="stylesheet">
+    <link href="includes/app.css" rel="stylesheet">
   </head>
   <body>
     <?php

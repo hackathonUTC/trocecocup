@@ -1,0 +1,50 @@
+*{
+	padding:0;
+	margin:0;
+}
+
+.inscription{
+border: 2px solid #8EDE93;
+border-radius: 50px;
+color:#8EDE93;
+}
+
+.inscription a{
+	color:#8EDE93;
+}
+
+.navbar-nav>li>a{
+	padding-top:8px;
+}
+
+.headline{
+	background-image:url('../img/bg.png');
+	background-size:cover;
+	height:500px;
+	text-align:center;
+}
+
+.headline h1{
+	padding-top:50px;
+	color:#4E637A;
+	font-size:50px;
+}
+
+.headline span{
+	color:#8EDE93;
+}
+
+.headline p{
+	font-size:24px;
+	color:#697C91;
+}
+
+.panel{
+	width:800px;
+	margin:0 auto;
+	margin-top:-40px;
+}
+
+.panel img{
+    background-position: center;
+}
