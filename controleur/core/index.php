@@ -3,7 +3,7 @@
 
 session_start();
 
-
+include_once ('config.php');
 include ('vue/core/index.php');
 /*
 require_once('CAS.class.php');
@@ -31,6 +31,7 @@ require_once('CAS.class.php');
         header('location: ./'); //On recharge la page une fois l'utilisateur identifié
     }
   }
+
 
 
 */

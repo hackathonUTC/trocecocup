@@ -3,17 +3,20 @@
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-        <span class="sr-only">Afficher le menu</span>
+        <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <div class="navbar-brand" href="#">SwiftCup</div>
+      <a class="navbar-brand" href="#">
+        <img src="img/logo.png" alt="Logo Switch Cup" />
+      </a>
     </div>
 
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav navbar-right">
-        <li <?php CONF::activeLink($navbar, 'catalogue'); ?>><a href="index.php">Catalogue</a></li>
+        <li <?php CONF::activeLink($navbar, 'catalogue'); ?>><a href="<?php echo $accessPath; ?>">Catalogue</a></li>
+        <li <?php CONF::activeLink($navbar, 'collection'); ?>><a href="<?php echo $accessPath.'index.php?section=collection'; ?>">Collection</a></li>
       </ul>
     </div><!--/.nav-collapse -->
   </div>
