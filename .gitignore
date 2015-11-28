@@ -1,1 +1,4 @@
 # Created by .ignore support plugin (hsz.mobi)
+
+#Ignores .DS_Store files on Mac
+**/.DS_Store
