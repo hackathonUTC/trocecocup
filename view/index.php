@@ -1,4 +1,4 @@
-<?php $nomProjet = 'Eco Troc'; ?>
+<?php $nomProjet = 'SwitchCup'; ?>
 <!DOCTYPE html>
 <html lang="fr">
   <head>
