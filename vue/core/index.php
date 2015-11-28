@@ -10,12 +10,30 @@
 
     <!-- Bootstrap -->
     <link href="includes/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="includes/bootstrap/css/app.css" rel="stylesheet">
   </head>
   <body>
     <?php
       $navbar = 'catalogue';
       include('vue/core/nav.php');
     ?>
+
+    <div class="headline">
+      <div class="container">
+        <h1>Switchez vos <span>eco-cups</span> facilement</h1>
+        <p>Sans prise de tête ni attente..</p>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="container">
+        <div class="panel-body">
+        <img src="./includes/img/illustration-switch.png" alt="">
+        <h2>Facilité d’échange. Lorem Ipsum. Lorem Ipsum. </h2>
+        <p>Sans prise de tête ni attente..</p>
+        </div>
+      </div>
+    </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="includes/jquery/js/jquery.js"></script>

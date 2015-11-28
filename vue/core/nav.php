@@ -14,7 +14,7 @@
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav navbar-right">
         <li <?php CONF::activeLink($navbar, 'catalogue'); ?>><a href="<?php echo $accessPath; ?>">Catalogue</a></li>
-        <li <?php CONF::activeLink($navbar, 'collection'); ?>><a href="<?php echo $accessPath.'view/collection.php'; ?>">Collection</a></li>
+        <li <?php CONF::activeLink($navbar, 'collection'); ?>><a href="<?php echo $accessPath.'index.php?section=collection'; ?>">Collection</a></li>
       </ul>
     </div><!--/.nav-collapse -->
   </div>
