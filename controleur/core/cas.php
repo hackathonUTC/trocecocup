@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Utils;
+require_once('controleur/core/xml.php');
 
 class Cas
 {
@@ -25,10 +25,9 @@ class Cas
 
     public function authenticate()
     {
+
         if (isset($_GET['ticket'])) {
             $response = file_get_contents($this->casUrl.'serviceValidate?service='.$this->url.'&ticket='.$_GET['ticket']);
-           var_dump($response);
-            die;
 
             if (empty($response)) return -1;
             $username = Xml::parseCasReturn($response);
