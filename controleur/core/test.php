@@ -1,1 +1,3 @@
-coucou
+<?php
+
+include ('vue/core/test.php');
