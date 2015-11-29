@@ -23,7 +23,7 @@ function mnouvelle_cup($nom, $asso, $semestre, $photo, $info, $nbtirage){
 	global $mysqli;
 
 	// si l'écocup n'a pas déjà été rentrée, on l'insère par la suite
-	$verif = "SELECT nom FROM cup WHERE nom = $nom AND asso = $asso AND semestre = $semestre";
+	$verif = "SELECT nom FROM cup WHERE nom = '$nom' AND asso = '$asso' AND semestre = '$semestre'";
 	if ($result = mysqli_query($mysqli, $verif)) {
 		if(mysql_num_rows($result) == 1)
 			$verif = 0;
