@@ -23,7 +23,7 @@
       </div>
     </div>
     <div class="box row">
-      <button href="index.php" type="button" class="btn btn-default">Retour à l'accueil</button>
+      <a href="index.php"><button type="button" class="btn btn-default">Retour à l'accueil</button></a>
     </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
