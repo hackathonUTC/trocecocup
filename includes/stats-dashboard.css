@@ -1,0 +1,58 @@
+.catalogue-stat {
+    text-align: left;
+}
+.catalogue-stat .stat-element1 {
+    background-color: rgb(142, 223, 147);
+    color:white;
+    text-align: left;
+    height: 8.5em;
+    border: solid transparent;
+    width: 23em;
+    padding:5px;
+    display:inline-block;
+
+    margin:5px;
+}
+.catalogue-stat .stat-element-nombre{
+    font-size: 3.5em;
+    padding-top: 10px;
+    line-height: 1.2em;
+ }
+.catalogue-stat .stat-element-legende{
+    font-size: 1.4em;
+    line-height: 1em;
+ }
+
+.catalogue-stat .stat-element-right img {
+    max-height: 7em;
+}
+
+.catalogue-stat .stat-element-right {
+    display:flex;
+    justify-content:center;
+    padding-top: 5px;
+}
+
+.catalogue-stat .stat-element2 {
+    background-color: rgb(78, 99, 122);
+    color:white;
+    text-align: left;
+    height: 8.5em;
+    border: solid transparent;
+    width: 23em;
+    padding:5px;
+    margin:5px;
+    display:inline-block;
+
+}
+.catalogue-stat .stat-element3 {
+    background-color: rgb(255, 203, 118);
+    color:white;
+    text-align: left;
+    height: 8.5em;
+    border: solid transparent;
+    width: 23em;
+    padding:5px;
+    margin:5px;
+    display:inline-block;
+}
