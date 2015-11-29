@@ -3,15 +3,38 @@
     <div class="tri">
     <div class="cat">FILTRES'</div>
     <div class="">
-        <button class="btn filter-options btn-default active" data-group="all"> all </button>
-        <?php
-        $assos = afficherAsso();
-        foreach($assos as $asso) {
-            ?>
-            <button class="btn filter-options btn-default" data-group="<?php echo $asso; ?>"> <?php echo $asso; ?> </button>
-            <?php
-        }
-        ?>
+        <ul class="list-inline">
+            <li><button class="btn filter-options btn-default active" data-group="all"> all </button></li>
+            <li  >
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Assos
+                        <span class="caret"></span>
+                    </button>
+
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+
+                        <?php
+                        $assos = afficherAsso();
+                        foreach($assos as $asso) {
+                            ?>
+                            <li><button class="btn filter-options btn-default" data-group="<?php echo $asso; ?>"> <?php echo $asso; ?> </button></li>
+                            <?php
+                        }
+                        ?>
+                    </ul>
+                </div>
+            </li>
+
+            <li><button  class="btn filter-options btn-default" data-group="moi"> Ma Collection </button></li>
+            <li><button  class="btn filter-options btn-default" data-group="moi"> Demandes </button></li>
+            <li><button  class="btn filter-options btn-default" data-group="moi"> Offres </button></li>
+        </ul>
+
+
+
+
+
     </div>
 </div>
     
@@ -25,8 +48,10 @@
       $displayCups = afficherCups(); ?>
       <div id="grid" class="row shuffle">
         <?php foreach ($displayCups as $cup)
-        { ?>
-          <div class="col-md-4 shuffle-item" data-groups='<?php echo "[\"all\", \"" . $cup["asso"] . "\"]"; ?>'>
+        {
+           if($cup['appartenance'] === 0) $moi = ""; else $moi = ", \"moi\"" ;
+            ?>
+          <div class="col-md-4 shuffle-item" data-groups='<?php echo "[\"all\", \"" . $cup["asso"] . "\" " . $moi ."]"; ?>'>
             <div class="ecocups"><!--Case ecocup-->
               <div class="img_ecocup"><!--Image-->
                      <img src="vue/img/ecocups/<?php echo $cup['photo']; ?>"/>
