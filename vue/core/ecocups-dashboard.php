@@ -26,7 +26,7 @@
       { ?>
         <div class="row">
             <div class="col-md-4">
-                
+  
 
         <div class="ecocups"><!--Case ecocup-->
           <div><!--Description ecocup-->
@@ -36,10 +36,12 @@
             <p><?php echo $tab['nom'].' '.$tab['semestre']; ?></p>
           </div>
           <div><!--Boutons-->
-            <button type="button" class="jAiDeja">Je l'ai déjà !</button>
-            <button type="button" class="jeVeux">Je veux !</button>
+            
           </div>
+
         </div>
+        <button type="button" class="jAiDeja">Je l'ai déjà !</button>
+            <button type="button" class="jeVeux">Je veux !  <span class="glyphicon glyphicon-star" aria-hidden="true"></span></button>
     <?php
         $i++;
       }
