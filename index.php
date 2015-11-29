@@ -38,6 +38,11 @@ if ( isset($_GET['section']) AND $_GET['section'] == 'cup')
     include_once('controleur/cup/cup.php');
 }
 
+if ( isset($_GET['section']) AND $_GET['section'] == 'collection')
+{
+	include_once('controleur/core/collection.php');
+}
+
 if ( !isset($_GET['section']) OR $_GET['section'] == 'accueil')
 {
     include_once('controleur/core/accueil.php');
