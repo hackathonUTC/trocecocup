@@ -19,9 +19,18 @@ if($user = "lceccare" || $user = "rjolliet" || $user = "baheuxvi"){
 		dataType: 'html',
 		data: {nom:nom, asso:asso, semestre:semestre, photo:photo, info:info, tirage:tirage},
 		success: function(msg){
-			
+			vider_champ();
 		}
 	});
+	}
+
+	function vider_champ(){
+		$('#nom').val("Ecocup Ajoutee !");
+		$('#asso').val("");
+		$('#semestre').val("")
+		$('#photo').val("");
+		$('#info').val("");
+		$('#tirage').val("");
 	}
 
 </script>

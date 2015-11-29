@@ -1,4 +1,4 @@
-trocecocup
+Switch'Cup
 ==========
 
-A Symfony project created on November 28, 2015, 5:16 pm.
+Switch'Cup est la plateforme d'échange d'écocups de l'UTC. Grâce à elle, vous pouvez facilement échanger vos écocups avec d'autres personnes !
