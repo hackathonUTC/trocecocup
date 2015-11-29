@@ -4,7 +4,7 @@ $navbar = 'catalogue';
 include('vue/core/nav.php');
 ?>
 
-<div>
+<div class="container">
 
 
 </div>
@@ -31,7 +31,7 @@ include('vue/core/footer.php');
 </div>
 
 	<?php
-	afficherCups();
+	//var_dump(afficherCups());
 	?>
 
 	<!--
