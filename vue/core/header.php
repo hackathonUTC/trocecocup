@@ -10,5 +10,7 @@
     <!-- Bootstrap -->
     <link href="includes/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="includes/app.css" rel="stylesheet">
+    <link href="includes/ecocups-dashboard.css" rel="stylesheet">
+    <link href="includes/stats-dashboard.css" rel="stylesheet">
   </head>
   <body>
