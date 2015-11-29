@@ -32,7 +32,7 @@ function mnouvelle_cup($nom, $asso, $semestre, $photo, $info, $nbtirage){
 
 	if($verif == 1){
 		$query = "INSERT INTO `cup`(`cup`, `asso`, `nom`, `semestre`, `photo`, `info`, `nbtirage`) 
-		VALUES (null, $asso, $nom, $semestre, $photo, $info, $nbtirage)";
+		VALUES (null, '$asso', '$nom', '$semestre', '$photo', '$info', '$nbtirage')";
 
 		if ($result = mysqli_query($mysqli, $query)) {
 			return 1;
