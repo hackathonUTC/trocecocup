@@ -51,6 +51,11 @@ else
 	  include_once('controleur/core/collection.php');
   }
 
+  if ( isset($_GET['section']) AND $_GET['section'] == 'offres')
+  {
+	  include_once('controleur/core/offres.php');
+  }
+
   if ( !isset($_GET['section']) OR $_GET['section'] == 'accueil')
   {
     include_once('controleur/core/accueil.php');
