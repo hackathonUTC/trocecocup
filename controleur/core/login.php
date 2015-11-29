@@ -10,15 +10,15 @@ if (!isset($_SESSION['user'])) //Si les infos user sont OK, on affiche la page
     } else //Sinon on récupère les infos de l'utilisateur et on recharge la page
     {
         $_SESSION['user'] = $user['user'];
-        include("controleur/user/user.php");
-        $nom = "";
-        $prenom = "";
+        $user =  $user['user'];
+        $nom = $user['nom'];
+        $prenom = $user['prenom'];
+        $mail = $user['mail'];
+        
         if(!existe($user)){
-
-            nouvel_user($user, $nom, $prenom, "");
-            echo "machin";
+            include("modele/user/user.php");
+            mnouvel_user($user, $nom, $prenom, $mail, "");
         }
-        else echo "truc";
 
         unset($_GET['ticket']);
         $url = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
