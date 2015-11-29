@@ -17,7 +17,7 @@
         <?php
         if (basename($_SERVER['PHP_SELF']) != '404.php')
         {
-          if (!isset($_GET['section']) OR $_GET['section'] == 'index')
+          if (!isset($_SESSION['user']) OR !isset($_GET['section']) OR $_GET['section'] == 'index')
           {
         ?>
             <li><a href="../navbar/">Inscription</a></li>
