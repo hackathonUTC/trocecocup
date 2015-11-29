@@ -9,13 +9,14 @@ if (!isset($_SESSION['user'])) //Si les infos user sont OK, on affiche la page
         $cas->login();
     } else //Sinon on récupère les infos de l'utilisateur et on recharge la page
     {
+        $useri =  $user['user'];
         $_SESSION['user'] = $user['user'];
 
         include("modele/user/user.php");
         if(!mexiste($user)){
-            $nom = "";
-            $prenom = "";
-            $mail = "";
+            $nom = $user['nom'];
+            $prenom = $user['prenom'];
+            $mail = $user['mail'];
             mnouvel_user($user, $nom, $prenom, $mail, "");
         }
 
