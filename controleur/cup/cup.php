@@ -54,7 +54,7 @@ function affAsso(){
 
 function nouvelle_cup($nom, $asso, $semestre, $photo, $info, $nbtirage){
 	$result = mnouvelle_cup($nom, $asso, $semestre, $photo, $info, $nbtirage);
-	return result;
+	return $result;
 }
 
 
