@@ -26,7 +26,6 @@ function mafficher($login){
 	global $mysqli;
 	$query = "SELECT * FROM user WHERE user.login = '$login'";
 	if ($result = mysqli_query($mysqli, $query)) {
-		print_r($result);
 		if(mysql_num_rows($result) == 1)
 			return $result;
 		else return 0;
