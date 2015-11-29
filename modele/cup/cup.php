@@ -1,29 +1,29 @@
-<?php 
+<?php
 
 function getAllCups(){
 	global $mysqli;
-	$query = "SELECT * FROM Cup";
+	$query = "SELECT * FROM 'cup'";
 	if ($result = mysqli_query($mysqli, $query)) {
 		return $result;
 	}
 	else return null;
-} 
+}
 
 function getAllAsso(){
 	global $mysqli;
-	$query = "SELECT DISTINCT asso FROM Cup";
+	$query = "SELECT DISTINCT asso FROM 'cup'";
 	if ($result = mysqli_query($mysqli, $query)) {
 		return $result;
 	}
 	else return null;
-} 
+}
 
 
 function mnouvelle_cup($nom, $asso, $semestre, $photo, $info, $nbtirage){
 	global $mysqli;
 
 	// si l'écocup n'a pas déjà été rentrée, on l'insère par la suite
-	$verif = "SELECT nom FROM cup WHERE nom = $nom AND asso = $asso AND semestre = $semestre";
+	$verif = "SELECT nom FROM cup WHERE nom = '$nom' AND asso = '$asso' AND semestre = '$semestre'";
 	if ($result = mysqli_query($mysqli, $verif)) {
 		if(mysql_num_rows($result) == 1)
 			$verif = 0;
@@ -32,10 +32,10 @@ function mnouvelle_cup($nom, $asso, $semestre, $photo, $info, $nbtirage){
 	}
 
 	if($verif == 1){
-		$query = "INSERT INTO `cup`(`cup`, `asso`, `nom`, `semestre`, `photo`, `info`, `nbtirage`) 
+		$query = "INSERT INTO `cup`(`cup`, `asso`, `nom`, `semestre`, `photo`, `info`, `nbtirage`)
 		VALUES (null, '$asso', '$nom', '$semestre', '$photo', '$info', $nbtirage)";
 
-		echo $query; 
+		echo $query;
 
 		if ($result = mysqli_query($mysqli, $query)) {
 			return 1;

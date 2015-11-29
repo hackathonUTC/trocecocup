@@ -1,5 +1,5 @@
 
-    <div class="cat">
+    <div class="container cat">
     STAT'
     </div>
 

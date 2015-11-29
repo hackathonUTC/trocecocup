@@ -12,4 +12,8 @@ function existe($login){
 	return $result;
 }
 
+function afficher($login){
+	$result = mafficher($login);
+	return $result;
+}
 ?>
