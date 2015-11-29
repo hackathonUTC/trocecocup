@@ -23,9 +23,9 @@ function afficherCups(){
 		$tab[$i]["info"] = $row["info"];
 		$tab[$i]["nbtirage"] = $row["nbtirage"];
 		
-		if(in_array($idcup), $appartenance) ? $app = 1 : $app = 0;
-		if(in_array($idcup), $jeveux) ? $jv = 1 : $jv = 0;
-		if(in_array($idcup), $jeveuxpu) ? $jvp = 1 : $jvp = 0;
+		if(in_array($idcup, $appartenance))  $app = 1 ; else $app = 0;
+		if(in_array($idcup, $jeveux))  $jv = 1 ; else $jv = 0;
+		if(in_array($idcup, $jeveuxpu))  $jvp = 1 ; else  $jvp = 0;
 		$tab[$i]["appartenance"] = $app;
 		$tab[$i]["veux"] = $jv;
 		$tab[$i]["cede"] = $jvp;
