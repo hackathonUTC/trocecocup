@@ -2,7 +2,7 @@
 
 function getAllCups(){
 	global $mysqli;
-	$query = "SELECT * FROM 'cup'";
+	$query = "SELECT * FROM cup";
 	if ($result = mysqli_query($mysqli, $query)) {
 		return $result;
 	}
@@ -11,7 +11,7 @@ function getAllCups(){
 
 function getAllAsso(){
 	global $mysqli;
-	$query = "SELECT DISTINCT asso FROM 'cup'";
+	$query = "SELECT DISTINCT asso FROM cup";
 	if ($result = mysqli_query($mysqli, $query)) {
 		return $result;
 	}
