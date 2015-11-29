@@ -1,6 +1,6 @@
 
     <div class="cat">
-        STAT'
+    STAT'
     </div>
 
     <div class="stat-element1">
