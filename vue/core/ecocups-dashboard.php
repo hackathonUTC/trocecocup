@@ -1,13 +1,14 @@
-<div id="grid" class="row-fluid">
+<div class="row-fluid">
 
-    <div class="tri"">
+    <div class="tri">
     <div class="cat">FILTRES'</div>
-    <div class="filter-options">
+    <div class="">
+        <button class="btn filter-options btn-default active" data-group="all"> all </button>
         <?php
         $assos = afficherAsso();
         foreach($assos as $asso) {
             ?>
-            <button class="btn btn-default" data-group="<?php echo $asso; ?>"> <?php echo $asso; ?> </button>
+            <button class="btn filter-options btn-default" data-group="<?php echo $asso; ?>"> <?php echo $asso; ?> </button>
             <?php
         }
         ?>
@@ -22,10 +23,10 @@
     <?php
       $i = 0;
       $displayCups = afficherCups(); ?>
-      <div id="grid" class="row">
+      <div id="grid" class="row shuffle">
         <?php foreach ($displayCups as $cup)
         { ?>
-          <div class="col-md-4" data-groups='[" <?php echo $cup["asso"]; ?> "]'>
+          <div class="col-md-4 shuffle-item" data-groups='<?php echo "[\"all\", \"" . $cup["asso"] . "\"]"; ?>'>
             <div class="ecocups"><!--Case ecocup-->
               <div class="img_ecocup"><!--Image-->
                      <img src="vue/img/ecocups/<?php echo $cup['photo']; ?>"/>

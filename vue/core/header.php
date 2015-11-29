@@ -15,10 +15,14 @@
     <link href="includes/ecocups-dashboard.css" rel="stylesheet">
     <link href="includes/stats-dashboard.css" rel="stylesheet">
   <script src="includes/jquery/js/jquery.js"></script>
+  <script src="includes/modernizer.js"></script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
   <script src="includes/bootstrap/js/bootstrap.min.js"></script>
   <script src="includes/Shuffle-master/jquery.shuffle.min.js"></script>
+  <script src="includes/throttle-debounce-plugin.js"></script>
   <script src="includes/shuffleUs.js"></script>
+
+
 
 </head>
 <body>
