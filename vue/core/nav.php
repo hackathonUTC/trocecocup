@@ -29,7 +29,7 @@
           ?>
             <li <?php CONF::activeLink($navbar, 'catalogue'); ?>><a href="<?php echo $accessPath; ?>">Catalogue</a></li>
             <li <?php CONF::activeLink($navbar, 'collection'); ?>><a href="<?php echo $accessPath.'index.php?section=collection'; ?>">Collection</a></li>
-            <li <?php activeLink($navbar, 'compte') ?> class="dropdown">
+            <li <?php CONF::activeLink($navbar, 'compte') ?> class="dropdown">
 		            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><?php echo $_SESSION['user']; ?><span class="caret"></span></a>
 					      <ul class="dropdown-menu" role="menu">
 						      <li class="dropdown-header">Compte</li>
