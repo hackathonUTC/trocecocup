@@ -71,12 +71,15 @@ color:#8EDE93;
 	width:150px;
 	font-weight:600;
 	color:#8EDE93;
-	border: 1px solid #8EDE93;
-	
+	border: 1px solid #8EDE93;	
 }
 
 footer{
 	text-align:center;
 	padding-top:30px;
 	font-size:16px;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover{
+	background-color:black;
 }
