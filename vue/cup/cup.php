@@ -17,4 +17,12 @@
 	afficherCups();
 	?>
 
+	<!--
+	afficherCups() envoie un tableau de type $tab[0...nbcup][champ]
+	les champs sont : id, nom, asso, semestre, photo (le chemin sera pas complet)
+	info, tirage, appartenance : 0 si péon l'a pas, sinon 1
+	cede : 0 si péon la vend pas sinon 1
+	veux : 0 si péon la veut pas sinon 1
+	-->
+
 </div>
