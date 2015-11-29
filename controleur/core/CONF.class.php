@@ -6,7 +6,7 @@ class CONF
       if(isset($navbar) AND isset($page))
       {
   			if($navbar == $page)
-  				echo 'class="active"';
+  				echo 'class="active" role="button" style="color:#8EDE93;height:40px;"';
   		}
     }
 }
