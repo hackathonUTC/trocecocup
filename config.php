@@ -1,2 +1,2 @@
 <?php
-  $accessPath = 'http://localhost/trocecocup/';
+  $accessPath = 'http://'.$_SERVER['HTTP_HOST'].'/ecotroc/trocecocup/';

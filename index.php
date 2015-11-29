@@ -30,9 +30,9 @@ if ( isset($_GET['section']) AND $_GET['section'] == 'test')
 }
 
 
-if ( isset($_GET['section']) AND $_GET['section'] == 'logout')
+	include_once('controleur/core/logout.php');
+}
 {
-    include_once('controleur/core/logout.php');
 }
 
 if (!isset($_GET['section']) AND $_GET['section'] == 'cup')

@@ -1,5 +1,4 @@
 <?php
-session_start();
 include('modele/cup/cup.php');
 
 function afficherCups(){
@@ -18,6 +17,22 @@ function afficherCups(){
 		echo("</li>");
 	}
 	echo "</ul>";
+}
+
+function afficherAsso(){
+	$result = getAllAsso();
+	while($row = mysqli_fetch_assoc($result)){
+		$nom = $row["asso"];
+		echo("<li><a href=\"#\"> $nom </a></li>");
+	}
+}
+
+function affAsso(){
+		$result = getAllAsso();
+	while($row = mysqli_fetch_assoc($result)){
+		$nom = $row["asso"];
+		echo $nom;
+	}
 }
 
 include("vue/cup/cup.php");
