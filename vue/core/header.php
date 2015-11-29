@@ -12,6 +12,8 @@
   <link href="includes/app.css" rel="stylesheet">
 
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <link href="includes/ecocups-dashboard.css" rel="stylesheet">
+    <link href="includes/stats-dashboard.css" rel="stylesheet">
   <script src="includes/jquery/js/jquery.js"></script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
   <script src="includes/bootstrap/js/bootstrap.min.js"></script>
