@@ -1,0 +1,76 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600);
+
+*{
+	padding:0;
+	margin:0;
+}
+
+html{
+	font-family: 'Open Sans', sans-serif;
+}
+
+.inscription{
+border: 2px solid #8EDE93;
+border-radius: 50px;
+color:#8EDE93;
+}
+
+.inscription a{
+	color:#8EDE93;
+}
+
+.navbar-nav>li>a{
+	padding-top:8px;
+}
+
+.headline{
+	background-image:url('../includes/img/bg.png');
+	background-size:cover;
+	height:500px;
+	text-align:center;
+}
+
+.headline h1{
+	padding-top:180px;
+	color:#4E637A;
+	font-size:60px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.headline span{
+	color:#8EDE93;
+	font-weight:600;
+}
+
+.headline p{
+	font-size:24px;
+	color:#697C91;
+}
+
+.box{
+	margin: 0 auto;
+	margin-top:-100px;
+	text-align:center;
+	width:800px;
+	background: #FFFFFF;
+	border: 1px solid #E0E0E0;
+	border-radius: 2px;
+	padding:50px;
+}
+
+.box h2,p{
+	color:#4E637A;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.box p{
+	font-size:16px;
+}
+
+.btn{
+	width:150px;
+	font-weight:600;
+	color:#8EDE93;
+	border: 1px solid #8EDE93;
+	
+}

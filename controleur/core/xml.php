@@ -1,5 +1,5 @@
 <?php
-namespace App\Utils;
+
 class Xml
 {
     public static function parseCasReturn($data)

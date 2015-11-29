@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="fr">
   <head>
@@ -10,7 +9,7 @@
 
     <!-- Bootstrap -->
     <link href="includes/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="includes/bootstrap/css/app.css" rel="stylesheet">
+    <link href="includes/app.css" rel="stylesheet">
   </head>
   <body>
     <?php
@@ -24,14 +23,12 @@
         <p>Sans prise de tête ni attente..</p>
       </div>
     </div>
-
-    <div class="panel panel-default">
-      <div class="container">
-        <div class="panel-body">
-        <img src="./includes/img/illustration-switch.png" alt="">
+    <div class="box row">
+        <img src="./includes/img/illustration-switch.png" alt="Illustration" />
         <h2>Facilité d’échange. Lorem Ipsum. Lorem Ipsum. </h2>
-        <p>Sans prise de tête ni attente..</p>
-        </div>
+        <p>Sans prise de tête ni attente..</p><br/>
+
+        <button type="button" class="btn btn-default">Connexion CAS</button>
       </div>
     </div>
 
