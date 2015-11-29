@@ -1,9 +1,9 @@
 <?php
 
-function mnouvel_user($login, $nom, $prenom, $localisation){
+function mnouvel_user($login, $nom, $prenom, $mail, $localisation){
 	global $mysqli;
-	$query = "INSERT INTO `user`(`login`, `nom`, `prenom`, `localisation`) 
-	VALUES ('$login', '$nom', '$prenom', '$localisation')";
+	$query = "INSERT INTO `user`(`login`, `nom`, `prenom`, `mail`, `localisation`) 
+	VALUES ('$login', '$nom', '$prenom', '$mail', '$localisation')";
 
 	if ($result = mysqli_query($mysqli, $query)) {
 		return 1;
