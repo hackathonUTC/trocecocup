@@ -1,8 +1,31 @@
+
+
 <?php
+include('vue/core/header.php');
 
 $user = $_SESSION['user'];
+
 if($user = "lceccare" || $user = "rjolliet" || $user = "baheuxvi"){
 ?>
+
+
+<script>
+
+  function inserer_cup(nom, asso, semestre, photo, info, tirage){
+	$.ajax({
+		type: 'POST',
+		processData: true,
+		url: "controleur/admin/update_ajoutcup.php",
+		dataType: 'html',
+		data: {nom:nom, asso:asso, semestre:semestre, photo:photo, info:info, tirage:tirage},
+		success: function(msg){
+			
+		}
+	});
+	}
+
+</script>
+
 <div>
 	<form method="post">
 		<ul>
@@ -32,41 +55,12 @@ if($user = "lceccare" || $user = "rjolliet" || $user = "baheuxvi"){
 			</li>
 			<li>
 				<input type="button" value="Envoi" 
-				onclick="inserer_cup($('#nom').val(),$('#asso').val(), $('#semestre').val(), $('#photo').val(), $('#info').val(), $('#tirage').val())" />
+				onclick="inserer_cup($('#nom').val(), $('#asso').val(), $('#semestre').val(), $('#photo').val(), $('#info').val(), $('#tirage').val())" />
 			</li>
 		</ul>
 	</form>
 </div>
+</body>
 <?php
 }
 ?>
-<script src="includes/noty/js/noty/jquery.noty.js"></script>
-
-<script>
-$(document).ready(function () {
-
-  function inserer_cup(nom, asso, semestre, photo, info, tirage){
-	$.ajax({
-		type: 'POST',
-		processData: true,
-		url: "controleur/admin/update_ajoutcup.php",
-		dataType: 'html',
-		data: {nom:nom, asso:asso, semestre:semestre, photo:photo, info:info, tirage:tirage},
-		success: function(msg){
-			var mess = "Insertion effectuee";
-			var typ = "success";
-			if(msg == 0){
-			 	mess = "Erreur d'insertion";
-				typ = "warning";
-			}
-			noty({text:mess, type:typ, timeout:1000,
-				callback: {
-					afterClose: function(){location.href="<?php echo $accessPath.'index.php?section=admin'; ?>";}
-				}});
-		}
-	});
-	}
-
-});
-
-</script>
