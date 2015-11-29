@@ -20,7 +20,11 @@
       <div class="container">
         <h1>Oups !</h1>
         <p>La page que vous avez demandé n'existe pas. :(</p>
+
       </div>
+    </div>
+    <div class="box row">
+      <a href="<?php echo $accessPath; ?>"><button type="button" class="btn btn-default">Retour à l'accueil</button></a>
     </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
