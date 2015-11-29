@@ -5,21 +5,23 @@ require_once('controleur/core/cas.php');
 include_once ('config.php');
 session_start();
 
-if (!isset($_SESSION['user'])) //Si les infos user sont OK, on affiche la page
+if ( isset($_GET['ticket']) AND !isset($_SESSION['user']))
 {
-    $cas = new Cas("https://cas.utc.fr/cas/", $accessPath);
-    $user = $cas->authenticate();
-    if ($user == -1) //Si pas de ticket ou pas de userdata, on redirige vers le CAS
-    {
-        $cas->login();
-    } else //Sinon on récupère les infos de l'utilisateur et on recharge la page
-    {
-        $_SESSION['user'] = $user;
-        unset($_GET['ticket']);
-        $url = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-        $url = strtok($url, '?');
-        header("Location: " . $url . "?section=accueil");
+    include('controleur/core/login.php');
+}
+
+if ( isset($_GET['section']) AND $_GET['section'] == 'login')
+{
+    if(isset($_SESSION['user'])){
+        header("Location: ./" );
+    } else {
+        include('controleur/core/login.php');
     }
+
+}
+
+if (!isset($_SESSION['user'])) {
+    include('controleur/core/index.php');
 }
 
 if ( isset($_GET['section']) AND $_GET['section'] == 'test')
@@ -27,25 +29,18 @@ if ( isset($_GET['section']) AND $_GET['section'] == 'test')
     include_once('controleur/core/test.php');
 }
 
+
 if ( isset($_GET['section']) AND $_GET['section'] == 'logout')
-if (isset($_GET['section']) AND $_GET['section'] == 'cup')
 {
     include_once('controleur/core/logout.php');
+}
+
+if (!isset($_GET['section']) AND $_GET['section'] == 'cup')
+{
     include_once('controleur/cup/cup.php');
 }
 
-if ( isset($_GET['section']) AND $_GET['section'] == 'accueil')
+if ( !isset($_GET['section']) OR $_GET['section'] == 'accueil')
 {
     include_once('controleur/core/accueil.php');
 }
-
-if (!isset($_GET['section']) OR $_GET['section'] == 'index')
-{
-    include_once('controleur/core/index.php');
-}
-
-if (!isset($_GET['section']) OR $_GET['section'] == 'cup')
-{
-    include_once('controleur/cup/cup.php');
-}
-
