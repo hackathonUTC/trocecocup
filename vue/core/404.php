@@ -23,6 +23,9 @@
 
       </div>
     </div>
+    <div class="box row">
+      <button href="index.php" type="button" class="btn btn-default">Retour à l'accueil</button>
+    </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="includes/jquery/js/jquery.js"></script>
