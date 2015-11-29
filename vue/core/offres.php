@@ -1,6 +1,6 @@
 <?php
   include('vue/core/header.php');
-  $navbar = 'collection';
+  $navbar = 'offres';
   include('nav.php');
 ?>
 
