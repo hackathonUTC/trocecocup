@@ -14,10 +14,10 @@
         <h2>Facilité d’échange. Lorem Ipsum. Lorem Ipsum. </h2>
         <p>Sans prise de tête ni attente..</p><br/>
         <button type="button" class="btn btn-default">Connexion CAS</button>
-      </div>
     </div>
+
     <?php
-          include('vue/core/footer.php');
+    include('vue/core/footer.php');
     ?>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="includes/jquery/js/jquery.js"></script>
