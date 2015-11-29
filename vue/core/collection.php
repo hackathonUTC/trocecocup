@@ -13,7 +13,7 @@
     <title>Ma collection</title>
 
     <!-- Bootstrap -->
-    <link href="<?php echo $accessPath.'bootstrap/css/bootstrap.min.css'; ?>" rel="stylesheet">
+    <link href="<?php echo $_CONF['$accessPath'] .'bootstrap/css/bootstrap.min.css'; ?>" rel="stylesheet">
   </head>
   <body>
 

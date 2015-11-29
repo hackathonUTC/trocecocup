@@ -2,3 +2,5 @@
 
 #Ignores .DS_Store files on Mac
 **/.DS_Store
+./modele/core/connexion_sql.php
+./config.php
