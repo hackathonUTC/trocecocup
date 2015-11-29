@@ -56,13 +56,16 @@ color:#8EDE93;
 .box{
 	margin: 0 auto;
 	text-align:center;
-
 	background: #FFFFFF;
 	border: 1px solid #E0E0E0;
 	border-radius: 2px;
 	padding:50px;
 }
 
+.box h2{
+		margin-top:40px;
+
+}
 .box h2,p{
 	color:#4E637A;
 	font-family: 'Open Sans', sans-serif;
@@ -107,6 +110,14 @@ footer{
 	font-size:16px;
 }
 
-.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover{
-	background-color:black;
+.navbar-default .navbar-toggle{
+	border-color: #8EDE93;
+}
+
+.navbar-default .navbar-toggle .icon-bar{
+	background-color: #8EDE93;
+}
+
+.navbar-toggle{
+	margin-top: 22px;
 }

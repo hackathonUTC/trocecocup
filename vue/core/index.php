@@ -13,10 +13,10 @@
     <div class="container">
         <div class="box row">
             <img src="./includes/img/illustration-switch.png" alt="Illustration" />
-            <h2>Facilité d’échange. Lorem Ipsum. Lorem Ipsum. </h2>
-            <p>Sans prise de tête ni attente..</p><br/>
-            <button type="button" class="btn btn-default">Connexion CAS</button>
-          </div>
+            <h2>Facilité d’échange. Plateforme simple à utiliser. Just do it. </h2>
+            <p>Echange ton eco-cup en quelques clics...</p>
+<!--             <button type="button" class="btn btn-default">Connexion CAS</button>
+ -->          </div>
         </div>
     </div>
     <?php
