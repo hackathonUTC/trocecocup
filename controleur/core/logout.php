@@ -1,5 +1,4 @@
 <?php
-session_start();
 
 require_once('controleur/core/cas.php');
 unset($_SESSION['user']);

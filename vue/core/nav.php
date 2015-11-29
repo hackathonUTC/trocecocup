@@ -19,7 +19,7 @@
           {
         ?>
             <li><a href="../navbar/">Inscription</a></li>
-            <li><a class="inscription" href="#" role="button" style="color:#8EDE93;height:40px;">Connexion CAS</a></li>
+            <li><a class="inscription" href="<?php echo $accessPath . "?section=login"; ?>" role="button" style="color:#8EDE93;height:40px;">Connexion CAS</a></li>
         <?php
           }
           else
