@@ -4,6 +4,11 @@
   include('nav.php');
 ?>
 
-<?php 
+<div class="container headline">
+</div>
+<div class="container">
+</div>
+
+<?php
 include('vue/core/footer.php')
 ?>

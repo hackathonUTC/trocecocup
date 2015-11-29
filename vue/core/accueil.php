@@ -4,7 +4,9 @@
   	include('vue/core/nav.php');
 ?>
 
-<div>
+<div class="container headline">
+</div>
+<div class="container">
 </div>
 
 <?php
