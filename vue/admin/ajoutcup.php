@@ -1,3 +1,8 @@
+<?php
+
+$user = $_SESSION['user'];
+if($user = "lceccare" || $user = "rjolliet" || $user = "baheuxvi"){
+?>
 <div>
 	<form method="post">
 		<ul>
@@ -26,23 +31,25 @@
 				<input type="text" id="tirage" required />
 			</li>
 			<li>
-				<input type="button" value="Submit" 
-				onclick="inserer_cup($('#nom').val(),$('#asso').val(), $('#semestre').val(), 
-				$('#photo').val(), $('#info').val(), $('#tirage').val())";
-				/>
+				<input type="button" value="Envoi" 
+				onclick="inserer_cup($('#nom').val(),$('#asso').val(), $('#semestre').val(), $('#photo').val(), $('#info').val(), $('#tirage').val())" />
 			</li>
 		</ul>
 	</form>
 </div>
-
+<?php
+}
+?>
 <script src="includes/noty/js/noty/jquery.noty.js"></script>
 
 <script>
-function inserer_cup(nom, asso, semestre, photo, info, tirage){
+$(document).ready(function () {
+
+  function inserer_cup(nom, asso, semestre, photo, info, tirage){
 	$.ajax({
 		type: 'POST',
 		processData: true,
-		url: "controleur/admin/ajoutcup.php",
+		url: "controleur/admin/update_ajoutcup.php",
 		dataType: 'html',
 		data: {nom:nom, asso:asso, semestre:semestre, photo:photo, info:info, tirage:tirage},
 		success: function(msg){
@@ -54,10 +61,12 @@ function inserer_cup(nom, asso, semestre, photo, info, tirage){
 			}
 			noty({text:mess, type:typ, timeout:1000,
 				callback: {
-					afterClose: function(){location.href="vue/admin/admin.php";
-				}
+					afterClose: function(){location.href="<?php echo $accessPath.'index.php?section=admin'; ?>";}
 				}});
 		}
 	});
 	}
+
+});
+
 </script>
