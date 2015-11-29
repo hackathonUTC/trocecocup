@@ -11,10 +11,14 @@ if (!isset($_SESSION['user'])) //Si les infos user sont OK, on affiche la page
     {
         include("controleur/user/user.php");
         $_SESSION['user'] = $user;
-
+        $nom = "";
+        $prenom = "";
         if(!existe($user)){
+
             nouvel_user($user, $nom, $prenom, "");
+            echo "machin";
         }
+        else echo "truc";
 
         unset($_GET['ticket']);
         $url = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
