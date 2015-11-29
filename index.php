@@ -41,6 +41,11 @@ else
     include_once('controleur/admin/admin.php');
   }
 
+      if ( isset($_GET['section']) AND $_GET['section'] == 'profil')
+  {
+    include_once('controleur/user/profil.php');
+  }
+
       if ( isset($_GET['section']) AND $_GET['section'] == 'admin_ajout'){
     include_once('controleur/admin/ajoutcup.php');
   }
