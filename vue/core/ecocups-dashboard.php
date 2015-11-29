@@ -12,14 +12,22 @@
             ?>
         </ul>
     </div>
+    <br/><br/><br/> 
     
   
+    <div class="cat">
+        ECO-CUPS'
+    </div>
 
     <?php
       $i = 0;
       $displayCups = afficherCups();
       while (isset($displayCups[$i]))
       { ?>
+        <div class="row">
+            <div class="col-md-4">
+                
+
         <div class="ecocups"><!--Case ecocup-->
           <div><!--Description ecocup-->
             <div><!--Image-->
@@ -36,7 +44,8 @@
         $i++;
       }
     ?>
-
+            </div>
+        </div>
 
     <!--
     afficherCups() envoie un tableau de type $tab[0...nbcup][champ]

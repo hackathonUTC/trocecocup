@@ -1,6 +1,26 @@
 .ecocups{
 	background-color:#FCFCFC;
 	border:2px solid #CCCCCC;
-	width:300px;
+	width:310px;
 	height:300px;
+}
+.jAiDeja{
+    border-radius:2px;
+    background-color:#FD6262;
+    border:none;
+    width:120px;
+    height:50px;
+    color:white;
+    font-weight:600;
+    font-size:16px;
+}
+.jeVeux{
+    border-radius:2px;
+    background-color:#8EDE93;
+    border:none;
+    width:180px;
+    height:50px;
+    color:white;
+    font-weight:600;
+    font-size:16px;
 }
