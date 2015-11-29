@@ -4,9 +4,15 @@ $navbar = 'catalogue';
 include('vue/core/nav.php');
 ?>
 
-<div class="container">
+<div class="container headline cataligue">
+  <div class="container headline-inside catalogue-inside">
+    <div class="container headline-inside catalogue-stat">
 
-
+      </div>
+    <div class="container headline-inside catalogue-cup">
+      
+    </div>
+  </div>
 </div>
 
 <?php
