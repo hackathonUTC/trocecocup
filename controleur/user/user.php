@@ -2,7 +2,7 @@
 
 include("modele/user/user.php");
 
-function nouvel_user($login, $nom, $prenom, $localisation){
+function nouvel_user($login, $nom, $prenom, $localisation, $mail){
 	$result = mnouvel_user($login, $nom, $prenom, $localisation);
 	return $result;
 }
