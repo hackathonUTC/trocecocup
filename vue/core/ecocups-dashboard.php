@@ -18,17 +18,25 @@
     <?php
       $i = 0;
       $displayCups = afficherCups();
-      while (isset($displayCups[$i]))
+      foreach ($displayCups as $cup)
       { ?>
         <div class="ecocups"><!--Case ecocup-->
           <div><!--Description ecocup-->
             <div><!--Image-->
-              <img src="vue/img/ecocups/<?php echo $tab['photo']; ?>"/>
+                <img src="vue/img/ecocups/<?php echo $cup['photo']; ?>"/>
             </div>
-            <p><?php echo $tab['nom'].' '.$tab['semestre']; ?></p>
+            <p>nom : <?php echo $cup['nom']; ?> </p>
+            <p>Semectre : <?php echo $cup['semestre']; ?> </p>
+              <p>Description : <?php echo $cup['info']; ?> </p>
+              <p>tirage : <?php echo $cup['nbtirage']; ?> </p>
           </div>
           <div><!--Boutons-->
-            <button type="button" class="jAiDeja">Je l'ai déjà !</button>
+              <?php if($cup['appartenance'] === 1) { ?> <button type="button" class="jAiDeja">Je l'ai déjà !</button>
+              <?php } ?>
+              <?php if($cup['veux'] === 1) { ?>   <button type="button" class="jeVeux">Je veux !</button>
+              <?php } ?>
+              <?php if($cup['cede'] === 1) { ?>   <button type="button" class="jeVeux">Je la cede !</button>
+              <?php } ?>
             <button type="button" class="jeVeux">Je veux !</button>
           </div>
         </div>
