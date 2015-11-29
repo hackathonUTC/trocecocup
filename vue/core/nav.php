@@ -13,10 +13,24 @@
       </a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right">
+      <ul class="nav navbar-nav navbar-right">
+        <?php
+          if (!isset($_GET['section']) OR $_GET['section'] == 'index')
+          {
+        ?>
             <li><a href="../navbar/">Inscription</a></li>
             <li><a class="inscription" href="#" role="button" style="color:#8EDE93;height:40px;">Connexion CAS</a></li>
-          </ul>
+        <?php
+          }
+          else
+          {
+          ?>
+            <li <?php CONF::activeLink($navbar, 'catalogue'); ?>><a href="<?php echo $accessPath; ?>">Catalogue</a></li>
+            <li <?php CONF::activeLink($navbar, 'collection'); ?>><a href="<?php echo $accessPath.'index.php?section=collection'; ?>">Collection</a></li>
+          <?php
+          }
+          ?>
+      </ul>
     </div><!--/.nav-collapse -->
     </div>
 </nav>
