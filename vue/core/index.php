@@ -1,7 +1,7 @@
 <?php
-      include('vue/core/header.php');
+      include_once('vue/core/header.php');
       $navbar = 'catalogue';
-      include('vue/core/nav.php');
+      include_once('vue/core/nav.php');
 ?>
     <div class="headline">
       <div class="container">
@@ -16,12 +16,10 @@
         <button type="button" class="btn btn-default">Connexion CAS</button>
     </div>
 
-<<<<<<< HEAD
-=======
     <?php
     include('vue/core/footer.php');
     ?>
->>>>>>> 4ef1f24dfa4ba7dd6dd0a596b9c5a7cbce2616e0
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="includes/jquery/js/jquery.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->

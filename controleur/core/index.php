@@ -1,6 +1,3 @@
 <?php
 
-include ('vue/core/index.php');
-
-
-
+include_once('vue/core/index.php');
