@@ -12,10 +12,6 @@ include('vue/core/nav.php');
 		<div class="container headline-inside catalogue-cup">
 			<?php include('vue/core/ecocups-dashboard.php'); ?>
 		</div>
-	</div>
-</div>
-<!-- 
 <?php
-// include('vue/core/footer.php');
+ include('vue/core/footer.php');
 ?>
- -->
