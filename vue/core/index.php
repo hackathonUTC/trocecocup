@@ -18,12 +18,6 @@
         <button type="button" class="btn btn-default">Connexion CAS</button>
     </div>
 </div>
-    <?php
-          include('vue/core/footer.php');
-    ?>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="includes/jquery/js/jquery.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="includes/bootstrap/js/bootstrap.min.js"></script>
-  </body>
-</html>
+<?php
+    include('vue/core/footer.php');
+?>
