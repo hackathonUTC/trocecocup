@@ -33,7 +33,12 @@
 		            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><?php echo $_SESSION['user']; ?><span class="caret"></span></a>
 					      <ul class="dropdown-menu" role="menu">
 						      <li class="dropdown-header">Compte</li>
-
+                  <?php
+                  if ($_SESSION['admin'])
+                  { ?>
+                    <li class="dropdown-header">Admin</li>
+                  <?php
+                  } ?>
 					      </ul>
 					  </li>
             <li><a href="<?php echo $accessPath.'index.php?section=logout'; ?>"><span class="glyphicon glyphicon-off"></span></a></li>
