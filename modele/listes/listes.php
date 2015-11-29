@@ -17,7 +17,7 @@ function listetypee($log, $type){
 
 function majouter_liste($log, $cup, $liste, $type){
 	global $mysqli;
-	$queryuser = "INSERT INTO `liste_user`(`liste`, `login`, `type`) VALUES ($liste, $log, $type)";
+	$queryuser = "INSERT INTO `liste_user`(`liste`, `login`, `type`, `etat`) VALUES ($liste, '$log', '$type', 0)";
 	$querycup = "INSERT INTO `liste_cup`(`liste`, `cup`) VALUES ($liste, $cup)";
 
 	if($resultuser = mysqli_query($mysqli, $queryuser) && $resultcup = mysqli_query($mysqli, $querycup))

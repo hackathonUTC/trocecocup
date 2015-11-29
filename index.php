@@ -36,6 +36,11 @@ else
     include_once('controleur/core/test.php');
   }
 
+    if ( isset($_GET['section']) AND $_GET['section'] == 'admin')
+  {
+    include_once('controleur/admin/admin.php');
+  }
+
   if ( isset($_GET['section']) AND $_GET['section'] == 'logout')
   {
 	   include_once('controleur/core/logout.php');
