@@ -7,11 +7,11 @@
     text-align: left;
     height: 8.5em;
     border: solid transparent;
-    width: 23em;
+    width: 26em;
     padding:5px;
     display:inline-block;
-
     margin:5px;
+    border-radius:4px;
 }
 .catalogue-stat .stat-element-nombre{
     font-size: 3.5em;
@@ -39,10 +39,11 @@
     text-align: left;
     height: 8.5em;
     border: solid transparent;
-    width: 23em;
+    width: 26em;
     padding:5px;
     margin:5px;
     display:inline-block;
+    border-radius:4px;
 
 }
 .catalogue-stat .stat-element3 {
@@ -51,8 +52,14 @@
     text-align: left;
     height: 8.5em;
     border: solid transparent;
-    width: 23em;
+    width: 26em;
     padding:5px;
     margin:5px;
     display:inline-block;
+    border-radius:4px;
+
+}
+
+.cat{
+    font-weight:600;
 }
