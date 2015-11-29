@@ -11,3 +11,4 @@
     <link href="includes/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="includes/app.css" rel="stylesheet">
   </head>
+  <body>
