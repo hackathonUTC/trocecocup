@@ -15,6 +15,8 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
         <?php
+        if (basename($_SERVER['PHP_SELF']) != '404.php')
+        {
           if (!isset($_GET['section']) OR $_GET['section'] == 'index')
           {
         ?>
@@ -27,9 +29,10 @@
           ?>
             <li <?php CONF::activeLink($navbar, 'catalogue'); ?>><a href="<?php echo $accessPath; ?>">Catalogue</a></li>
             <li <?php CONF::activeLink($navbar, 'collection'); ?>><a href="<?php echo $accessPath.'index.php?section=collection'; ?>">Collection</a></li>
-          <?php
+        <?php
           }
-          ?>
+        }
+        ?>
       </ul>
     </div><!--/.nav-collapse -->
     </div>
