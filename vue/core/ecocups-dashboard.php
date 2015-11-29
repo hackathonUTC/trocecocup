@@ -1,8 +1,7 @@
 <div id="grid" class="row-fluid">
-
-    <div class="tri"">
+  <div class="tri">
     <div class="cat">FILTRES'</div>
-    <div class="filter-options">
+      <div class="filter-options">
         <?php
         $assos = afficherAsso();
         foreach($assos as $asso) {
@@ -11,10 +10,10 @@
             <?php
         }
         ?>
+      </div>
     </div>
-</div>
-    
-  
+
+
     <div class="cat">
         ECO-CUPS'
     </div>
@@ -52,7 +51,7 @@
           <!-- sizer -->
           <div class="col-xs-6 col-sm-4 col-md-3 shuffle_sizer"></div>
       </div>
-        </div>
+  </div>
 
     <!--
     afficherCups() envoie un tableau de type $tab[0...nbcup][champ]
@@ -61,5 +60,3 @@
     cede : 0 si péon la vend pas sinon 1
     veux : 0 si péon la veut pas sinon 1
     -->
-
-</div>
