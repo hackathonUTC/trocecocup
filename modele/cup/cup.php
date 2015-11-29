@@ -18,28 +18,14 @@ function getAllAsso(){
 	else return null;
 } 
 
-function listetypee($log, $type){
+function mnouvelle_cup($nom, $asso, $semestre, $photo, $info, $nbtirage){
 	global $mysqli;
-	$query = "SELECT DISTINCT Cup.cup 
-			  FROM Cup
-			  LEFT JOIN liste_cup on liste_cup.cup = Cup.cup
-			  LEFT JOIN liste_user on liste_user.liste = liste_cup.liste
-			  WHERE liste_user.login = $log
-			  AND liste_user.type = $type";
+	$query = "INSERT INTO `cup`(`cup`, `asso`, `nom`, `semestre`, `photo`, `info`, `nbtirage`) 
+	VALUES (null, $asso, $nom, $semestre, $photo, $info, $nbtirage)";
 
 	if ($result = mysqli_query($mysqli, $query)) {
-		return $result;
-	}
-	else return null;
-}
-
-function ajouter_liste($log, $cup, $liste, $type){
-	global $mysqli;
-	$queryuser = "INSERT INTO `liste_user`(`liste`, `login`, `type`) VALUES ($liste, $log, $type)";
-	$querycup = "INSERT INTO `liste_cup`(`liste`, `cup`) VALUES ($liste, $cup)";
-
-	if($resultuser = mysqli_query($mysqli, $queryuser) && $resultcup = mysqli_query($mysqli, $querycup))
 		return 1;
+	}
 	else return 0;
 }
 
