@@ -16,11 +16,14 @@
 .catalogue-stat .stat-element-nombre{
     font-size: 3.5em;
     padding-top: 10px;
+    margin-left:10px;
     line-height: 1.2em;
  }
 .catalogue-stat .stat-element-legende{
     font-size: 1.4em;
     line-height: 1em;
+    margin-left:10px;
+
  }
 
 .catalogue-stat .stat-element-right img {
@@ -31,6 +34,7 @@
     display:flex;
     justify-content:center;
     padding-top: 5px;
+
 }
 
 .catalogue-stat .stat-element2 {

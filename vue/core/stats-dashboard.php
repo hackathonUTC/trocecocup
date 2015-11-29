@@ -17,7 +17,7 @@
     <div class="stat-element2">
         <div class="row">
             <div class="stat-element-left col-xs-8">
-                <div class="stat-element-nombre ">102</div>
+                <div class="stat-element-nombre ">23</div>
                 <div class="stat-element-legende">eco-cup echangés</div>
             </div>
             <div class="stat-element-right">
