@@ -1,4 +1,4 @@
-<div id="grid" class="row-fluid">
+<div id="grid" class=" container row-fluid">
 
     <span class="cat">FILTRES'</span>
     <div class="dropdown sort-options">
