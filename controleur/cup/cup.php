@@ -2,6 +2,7 @@
 include('modele/cup/cup.php');
 
 function afficherCups(){
+	include('modele/listes/listes.php');
 	$user = $_SESSION["user"];
 	$result = getAllCups();
 	$ecocup =  mysqli_fetch_assoc($result);
@@ -50,6 +51,12 @@ function affAsso(){
 		echo $nom;
 	}
 }
+
+function nouvelle_cup($nom, $asso, $semestre, $photo, $info, $nbtirage){
+	$result = mnouvelle_cup($nom, $asso, $semestre, $photo, $info, $nbtirage);
+	return $result;
+}
+
 
 include("vue/cup/cup.php");
 

@@ -1,7 +1,7 @@
 <?php
 	include('vue/core/header.php');
-  $navbar = 'catalogue';
-  include('vue/core/nav.php');
+  	$navbar = 'catalogue';
+  	include('vue/core/nav.php');
 ?>
 
 <div>

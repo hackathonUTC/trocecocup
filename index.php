@@ -20,30 +20,33 @@ if ( isset($_GET['section']) AND $_GET['section'] == 'login')
 }
 
 if (!isset($_SESSION['user'])) {
-    include('controleur/core/index.php');
+    include_once('controleur/core/index.php');
 }
 
-if ( isset($_GET['section']) AND $_GET['section'] == 'test')
-{
+else {
+
+  if ( isset($_GET['section']) AND $_GET['section'] == 'test')
+  {
     include_once('controleur/core/test.php');
-}
+  }
 
-if ( isset($_GET['section']) AND $_GET['section'] == 'logout')
-{
-	include_once('controleur/core/logout.php');
-}
+  if ( isset($_GET['section']) AND $_GET['section'] == 'logout')
+  {
+	   include_once('controleur/core/logout.php');
+  }
 
-if ( isset($_GET['section']) AND $_GET['section'] == 'cup')
-{
+  if ( isset($_GET['section']) AND $_GET['section'] == 'cup')
+  {
     include_once('controleur/cup/cup.php');
-}
+  }
 
-if ( isset($_GET['section']) AND $_GET['section'] == 'collection')
-{
-	include_once('controleur/core/collection.php');
-}
+  if ( isset($_GET['section']) AND $_GET['section'] == 'collection')
+  {
+	  include_once('controleur/core/collection.php');
+  }
 
-if ( !isset($_GET['section']) OR $_GET['section'] == 'accueil')
-{
+  if ( !isset($_GET['section']) OR $_GET['section'] == 'accueil')
+  {
     include_once('controleur/core/accueil.php');
+  }
 }

@@ -29,6 +29,7 @@
           ?>
             <li <?php CONF::activeLink($navbar, 'catalogue'); ?>><a href="<?php echo $accessPath; ?>">Catalogue</a></li>
             <li <?php CONF::activeLink($navbar, 'collection'); ?>><a href="<?php echo $accessPath.'index.php?section=collection'; ?>">Collection</a></li>
+            <li><a href="<?php echo $accessPath.'index.php?section=logout'; ?>"><span class="glyphicon glyphicon-off"></span></a></li>
         <?php
           }
         }
