@@ -29,14 +29,6 @@ if (!isset($_SESSION['user']))
 
 else
 {
-  //Test d'administration
-  if($_SESSION['user'] == 'baheuxvi')
-  {
-    $_SESSION['admin'] == true;
-  }
-  else {
-    $_SESSION['admin'] == false;
-  }
 
   //Tests d'affichage de page
   if ( isset($_GET['section']) AND $_GET['section'] == 'test')
