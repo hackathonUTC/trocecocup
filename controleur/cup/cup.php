@@ -3,20 +3,30 @@ include('modele/cup/cup.php');
 
 function afficherCups(){
 	$result = getAllCups();
-	echo "<ul>";
+	$ecocup =  mysqli_fetch_assoc($result);
+	$appartenance = aMoi($_SESSION["user"]);
+	$appartenance = mysqli_fetch_assoc($appartenance);
+	$i = 0;
+	
 	while($row = mysqli_fetch_assoc($result)){
-		$nom = $row["nom"];
-		$asso = $row["asso"];
-		$semestre = $row["semestre"];
-		$photo = $row["photo"];
-		$info = $row["info"];
-		$nbtirage = $row["nbtirage"];
+		$tab[$i]["id"] = $row["cup"];
+		$tab[$i]["nom"] = $row["nom"];
+		$tab[$i]["asso"] = $row["asso"];
+		$tab[$i]["semestre"] = $row["semestre"];
+		$tab[$i]["photo"] = $row["photo"];
+		$tab[$i]["info"] = $row["info"];
+		$tab[$i]["nbtirage"] = $row["nbtirage"];
+		
+		if(in_array($row["cup"]), $appartenance){
+			$app = 1;
+		}
+		else $app = 0;
 
-		echo("<li data-groups='[\"$asso\"]'>");
-		echo("Nom : $nom   -    Asso : $asso");
-		echo("</li>");
+		$tab[$i]["appartenance"] = $app;
+
+		$i++;
 	}
-	echo "</ul>";
+	return $tab;
 }
 
 function afficherAsso(){
