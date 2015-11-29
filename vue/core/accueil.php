@@ -4,6 +4,9 @@
   	include('vue/core/nav.php');
 ?>
 
+<body>
+
+<!-- 
 <div class="container headline">
 </div>
 <div class="container">
@@ -12,3 +15,4 @@
 <?php
 	include('vue/core/footer.php');
 ?>
+ -->
