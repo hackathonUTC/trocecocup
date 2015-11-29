@@ -16,7 +16,22 @@
     </div>
 
     <?php
-    //var_dump(afficherCups());
+      foreach (afficherCups() as $tab)
+      { ?>
+        <div><!--Case ecocup-->
+          <div><!--Description ecocup-->
+            <div><!--Image-->
+              <img src="vue/img/ecocups/<?php echo $tab['photo']; ?>"/>
+            </div>
+            <p><?php echo $tab['nom'].' '.$tab['semestre']; ?></p>
+          </div>
+          <div><!--Boutons-->
+            <button type="button" class="jAiDeja">Je l'ai déjà !</button>
+            <button type="button" class="jeVeux">Je veux !</button>
+          </div>
+        </div>
+    <?php
+      }
     ?>
 
     <!--
