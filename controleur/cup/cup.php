@@ -2,14 +2,20 @@
 include('modele/cup/cup.php');
 
 function afficherCups(){
+	$user = $_SESSION["user"];
 	$result = getAllCups();
 	$ecocup =  mysqli_fetch_assoc($result);
-	$appartenance = aMoi($_SESSION["user"]);
+	$appartenance = listetypee($user, "collection");
 	$appartenance = mysqli_fetch_assoc($appartenance);
+	$jeveux = listetypee($user, "veux");
+	$jeveux = mysqli_fetch_assoc($jeveux);
+	$jeveuxpu = listetypee($user, "cede");
+	$jeveuxpu = mysqli_fetch_assoc($jeveuxpu);
 	$i = 0;
-	
+
 	while($row = mysqli_fetch_assoc($result)){
-		$tab[$i]["id"] = $row["cup"];
+		$idcup = $row["cup"];
+		$tab[$i]["id"] = $idcup;
 		$tab[$i]["nom"] = $row["nom"];
 		$tab[$i]["asso"] = $row["asso"];
 		$tab[$i]["semestre"] = $row["semestre"];
@@ -17,12 +23,12 @@ function afficherCups(){
 		$tab[$i]["info"] = $row["info"];
 		$tab[$i]["nbtirage"] = $row["nbtirage"];
 		
-		if(in_array($row["cup"]), $appartenance){
-			$app = 1;
-		}
-		else $app = 0;
-
+		if(in_array($idcup), $appartenance) ? $app = 1 : $app = 0;
+		if(in_array($idcup), $jeveux) ? $jv = 1 : $jv = 0;
+		if(in_array($idcup), $jeveuxpu) ? $jvp = 1 : $jvp = 0;
 		$tab[$i]["appartenance"] = $app;
+		$tab[$i]["veux"] = $jv;
+		$tab[$i]["cede"] = $jvp;
 
 		$i++;
 	}
