@@ -1,5 +1,3 @@
-
-
 <div id="grid" class="row-fluid">
 
     <span>Filter :</span>
@@ -16,7 +14,25 @@
     </div>
 
     <?php
-    //var_dump(afficherCups());
+      $i = 0;
+      $displayCups = afficherCups();
+      while (isset($displayCups[$i]))
+      { ?>
+        <div><!--Case ecocup-->
+          <div><!--Description ecocup-->
+            <div><!--Image-->
+              <img src="vue/img/ecocups/<?php echo $tab['photo']; ?>"/>
+            </div>
+            <p><?php echo $tab['nom'].' '.$tab['semestre']; ?></p>
+          </div>
+          <div><!--Boutons-->
+            <button type="button" class="jAiDeja">Je l'ai déjà !</button>
+            <button type="button" class="jeVeux">Je veux !</button>
+          </div>
+        </div>
+    <?php
+        $i++;
+      }
     ?>
 
     <!--
