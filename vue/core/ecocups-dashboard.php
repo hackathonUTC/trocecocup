@@ -21,35 +21,31 @@
 
     <?php
       $i = 0;
-      $displayCups = afficherCups();
-      foreach ($displayCups as $cup)
-      { ?>
-        <div class="row">
-            <div class="col-md-4">
-        <div class="ecocups"><!--Case ecocup-->
-          <div><!--Description ecocup-->
-            <div class="img_ecocup"><!--Image-->
-                <img src="vue/img/ecocups/<?php echo $cup['photo']; ?>"/>
-            </div>
-              <p><strong>Nom</strong>: <?php echo $cup['nom']; ?> </p>
-              <p><strong>Semestre</strong> : <?php echo $cup['semestre']; ?> </p>
-              <p><strong>Description</strong> : <?php echo $cup['info']; ?> </p>
-              <p><strong>Tirage</strong> : <?php echo $cup['nbtirage']; ?> </p>
-          </div>
-          <div><!--Boutons-->
+      $displayCups = afficherCups(); ?>
+      <div class="row">
+      <?php foreach ($displayCups as $cup)
+      {?>
+        <div class="col-md-4">
+          <div class="ecocups"><!--Case ecocup-->
+              <div class="img_ecocup"><!--Image-->
+                  <img src="vue/img/ecocups/<?php echo $cup['photo']; ?>"/>
+              </div>
+                <p><strong>Nom</strong>: <?php echo $cup['nom']; ?> </p>
+                <p><strong>Semestre</strong> : <?php echo $cup['semestre']; ?> </p>
+                <p><strong>Description</strong> : <?php echo $cup['info']; ?> </p>
+                <p><strong>Tirage</strong> : <?php echo $cup['nbtirage']; ?> </p>
+              </div>
+              <div><!--Boutons-->
+                <?php if($cup['appartenance'] === 0) { ?> <button type="button" class="jAiDeja">Je l'ai déjà !</button>
+                <?php } ?>
+                <?php if($cup['veux'] === 0) { ?>   <button type="button" class="jeVeux">Je veux !</button>
+                <?php } ?>
+                <?php if($cup['cede'] === 1) { ?>   <button type="button" class="jeVeux">Je la cede !</button>
+                <?php } ?>
+              </div>
 
-              <?php if($cup['appartenance'] === 1) { ?> <button type="button" class="jAiDeja">Je l'ai déjà !</button>
-              <?php } ?>
-              <?php if($cup['veux'] === 1) { ?>   <button type="button" class="jeVeux">Je veux !</button>
-              <?php } ?>
-              <?php if($cup['cede'] === 1) { ?>   <button type="button" class="jeVeux">Je la cede !</button>
-              <?php } ?>
-          </div>
 
-        </div>
-        <button type="button" class="jAiDeja">Je l'ai déjà !</button>
-            <button type="button" class="jeVeux">Je veux !  <span class="glyphicon glyphicon-star" aria-hidden="true"></span></button>
-    <?php
+        </div>    <?php
         $i++;
       }
     ?>
