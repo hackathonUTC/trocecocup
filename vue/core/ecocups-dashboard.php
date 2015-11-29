@@ -14,10 +14,12 @@
             ?>
         </ul>
     </div>
+  
 
     <?php
     //var_dump(afficherCups());
     ?>
+
 
     <!--
     afficherCups() envoie un tableau de type $tab[0...nbcup][champ]
