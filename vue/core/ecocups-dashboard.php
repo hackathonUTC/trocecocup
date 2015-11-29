@@ -1,6 +1,6 @@
 <div id="grid" class="row-fluid">
 
-    <span>Filter :</span>
+    <span class="cat">FILTRES'</span>
     <div class="dropdown sort-options">
         <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
             Asso
@@ -12,31 +12,49 @@
             ?>
         </ul>
     </div>
+    <br/><br/><br/> 
     
   
+    <div class="cat">
+        ECO-CUPS'
+    </div>
 
     <?php
       $i = 0;
       $displayCups = afficherCups();
-      while (isset($displayCups[$i]))
+      foreach ($displayCups as $cup)
       { ?>
+        <div class="row">
+            <div class="col-md-4">
         <div class="ecocups"><!--Case ecocup-->
           <div><!--Description ecocup-->
-            <div><!--Image-->
-              <img src="vue/img/ecocups/<?php echo $tab['photo']; ?>"/>
+            <div class="img_ecocup"><!--Image-->
+                <img src="vue/img/ecocups/<?php echo $cup['photo']; ?>"/>
             </div>
-            <p><?php echo $tab['nom'].' '.$tab['semestre']; ?></p>
+              <p><strong>Nom</strong>: <?php echo $cup['nom']; ?> </p>
+              <p><strong>Semestre</strong> : <?php echo $cup['semestre']; ?> </p>
+              <p><strong>Description</strong> : <?php echo $cup['info']; ?> </p>
+              <p><strong>Tirage</strong> : <?php echo $cup['nbtirage']; ?> </p>
           </div>
           <div><!--Boutons-->
-            <button type="button" class="jAiDeja">Je l'ai déjà !</button>
-            <button type="button" class="jeVeux">Je veux !</button>
+
+              <?php if($cup['appartenance'] === 1) { ?> <button type="button" class="jAiDeja">Je l'ai déjà !</button>
+              <?php } ?>
+              <?php if($cup['veux'] === 1) { ?>   <button type="button" class="jeVeux">Je veux !</button>
+              <?php } ?>
+              <?php if($cup['cede'] === 1) { ?>   <button type="button" class="jeVeux">Je la cede !</button>
+              <?php } ?>
           </div>
+
         </div>
+        <button type="button" class="jAiDeja">Je l'ai déjà !</button>
+            <button type="button" class="jeVeux">Je veux !  <span class="glyphicon glyphicon-star" aria-hidden="true"></span></button>
     <?php
         $i++;
       }
     ?>
-
+            </div>
+        </div>
 
     <!--
     afficherCups() envoie un tableau de type $tab[0...nbcup][champ]
