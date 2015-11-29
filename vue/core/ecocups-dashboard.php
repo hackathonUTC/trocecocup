@@ -12,9 +12,9 @@
             ?>
         </ul>
     </div>
-    <br/><br/><br/> 
-    
-  
+    <br/><br/><br/>
+
+
     <div class="cat">
         ECO-CUPS'
     </div>
@@ -34,23 +34,22 @@
                 <p><strong>Semestre</strong> : <?php echo $cup['semestre']; ?> </p>
                 <p><strong>Description</strong> : <?php echo $cup['info']; ?> </p>
                 <p><strong>Tirage</strong> : <?php echo $cup['nbtirage']; ?> </p>
-              </div>
-              <div><!--Boutons-->
+          </div>
+          <div><!--Boutons-->
                 <?php if($cup['appartenance'] === 0) { ?> <button type="button" class="jAiDeja">Je l'ai déjà !</button>
                 <?php } ?>
                 <?php if($cup['veux'] === 0) { ?>   <button type="button" class="jeVeux">Je veux !</button>
                 <?php } ?>
                 <?php if($cup['cede'] === 1) { ?>   <button type="button" class="jeVeux">Je la cede !</button>
                 <?php } ?>
-              </div>
+          </div>
 
 
         </div>    <?php
         $i++;
       }
     ?>
-            </div>
-        </div>
+    </div>
 
     <!--
     afficherCups() envoie un tableau de type $tab[0...nbcup][champ]
