@@ -1,10 +1,5 @@
 <div id="grid" class="row-fluid">
-<<<<<<< HEAD
-
-    <div class="tri">
-=======
   <div class="tri">
->>>>>>> 4a9988a4ecd5972bfc28d24d3f8fa61599dfa150
     <div class="cat">FILTRES'</div>
       <div class="filter-options">
         <?php
@@ -19,7 +14,7 @@
     </div>
 
 
-    <div class="cat">
+    <div class="cat" style="margin-top:50px">
         ECO-CUPS'
     </div>
 
