@@ -6,24 +6,24 @@ function afficherCups()
 	include('modele/listes/listes.php');
 	$user = $_SESSION["user"];
 	$result = getAllCups();
-	
-	$ecocup = mysqli_fetch_assoc($result);
-	if ($ecocup) {
-		$appartenance = listetypee($user, "collection");
-		if ($appartenance) {
-			$appartenance = mysqli_fetch_assoc($appartenance);
-		}
-	} else {
-		$appartenance = null;
+
+	//$ecocup = mysqli_fetch_assoc($result);
+	//if ($ecocup) {
+	$appartenance = listetypee($user, "collection");
+	if ($appartenance) {
+		$appartenance = mysqli_fetch_assoc($appartenance);
 	}
+
 	$jeveux = listetypee($user, "veux");
 	if ($jeveux) {
 		$jeveux = mysqli_fetch_assoc($jeveux);
 	}
+
 	$jeveuxpu = listetypee($user, "cede");
 	if($jeveuxpu) {
 		$jeveuxpu = mysqli_fetch_assoc($jeveuxpu);
 	}
+	
 	$i = 0;
 	$tab = array();
 	while($row = mysqli_fetch_assoc($result)){
