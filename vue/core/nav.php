@@ -12,12 +12,11 @@
         <img src="./includes/img/Logo.png" alt="Logo Switch Cup" />
       </a>
     </div>
-
-    <div id="navbar" class="collapse navbar-collapse">
-      <ul class="nav navbar-nav navbar-right">
-        <li <?php CONF::activeLink($navbar, 'catalogue'); ?>><a href="<?php echo $accessPath; ?>">Catalogue</a></li>
-        <li <?php CONF::activeLink($navbar, 'collection'); ?>><a href="<?php echo $accessPath.'index.php?section=collection'; ?>">Collection</a></li>
-      </ul>
+    <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="../navbar/">Inscription</a></li>
+            <li><a class="inscription" href="#" role="button" style="color:#8EDE93;height:40px;">Connexion CAS</a></li>
+          </ul>
     </div><!--/.nav-collapse -->
-  </div>
+    </div>
 </nav>
