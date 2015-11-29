@@ -1,19 +1,31 @@
 <?php
 include('modele/cup/cup.php');
 
-function afficherCups(){
+function afficherCups()
+{
 	include('modele/listes/listes.php');
 	$user = $_SESSION["user"];
 	$result = getAllCups();
-	$ecocup =  mysqli_fetch_assoc($result);
-	$appartenance = listetypee($user, "collection");
-	$appartenance = mysqli_fetch_assoc($appartenance);
+	
+	$ecocup = mysqli_fetch_assoc($result);
+	if ($ecocup) {
+		$appartenance = listetypee($user, "collection");
+		if ($appartenance) {
+			$appartenance = mysqli_fetch_assoc($appartenance);
+		}
+	} else {
+		$appartenance = null;
+	}
 	$jeveux = listetypee($user, "veux");
-	$jeveux = mysqli_fetch_assoc($jeveux);
+	if ($jeveux) {
+		$jeveux = mysqli_fetch_assoc($jeveux);
+	}
 	$jeveuxpu = listetypee($user, "cede");
-	$jeveuxpu = mysqli_fetch_assoc($jeveuxpu);
+	if($jeveuxpu) {
+		$jeveuxpu = mysqli_fetch_assoc($jeveuxpu);
+	}
 	$i = 0;
-
+	$tab = array();
 	while($row = mysqli_fetch_assoc($result)){
 		$idcup = $row["cup"];
 		$tab[$i]["id"] = $idcup;
@@ -22,11 +34,11 @@ function afficherCups(){
 		$tab[$i]["semestre"] = $row["semestre"];
 		$tab[$i]["photo"] = $row["photo"];
 		$tab[$i]["info"] = $row["info"];
-		$tab[$i]["nbtirage"] = $row["nbtirage"];
+		if(isset($appartenance)) $tab[$i]["nbtirage"] = $row["nbtirage"]; else $tab[$i]["nbtirage"] = null;
 		
-		if(in_array($idcup, $appartenance))  $app = 1 ; else $app = 0;
-		if(in_array($idcup, $jeveux))  $jv = 1 ; else $jv = 0;
-		if(in_array($idcup, $jeveuxpu))  $jvp = 1 ; else  $jvp = 0;
+		if(isset($appartenance) && array($idcup, $appartenance))  $app = 1 ; else $app = 0;
+		if(isset($jeveux) && in_array($idcup, $jeveux))  $jv = 1 ; else $jv = 0;
+		if(isset($jeveuxpu) && in_array($idcup, $jeveuxpu))  $jvp = 1 ; else  $jvp = 0;
 		$tab[$i]["appartenance"] = $app;
 		$tab[$i]["veux"] = $jv;
 		$tab[$i]["cede"] = $jvp;
