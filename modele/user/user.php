@@ -25,12 +25,14 @@ function mexiste($login){
 function mafficher($login){
 	global $mysqli;
 	$query = "SELECT * FROM user WHERE user.login = '$login' OR user.nom = '$login'";
+	echo $query;
 	if ($result = mysqli_query($mysqli, $query)) {
+		print_r($result);
 		if(mysql_num_rows($result) == 1)
 			return $result;
-		else return null;
+		else return 0;
 	}
-	else return null;
+	else return 0;
 }
 
 ?>
