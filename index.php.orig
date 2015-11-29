@@ -27,17 +27,19 @@ if ( isset($_GET['section']) AND $_GET['section'] == 'test')
     include_once('controleur/core/test.php');
 }
 
-if ( isset($_GET['section']) AND $_GET['section'] == 'logout'){
-	include_once('controleur/core/logout.php');
-}
-if (isset($_GET['section']) AND $_GET['section'] == 'cup')
+if (!isset($_GET['section']) OR $_GET['section'] == 'cup')
 {
     include_once('controleur/cup/cup.php');
+=======
+if ( isset($_GET['section']) AND $_GET['section'] == 'logout')
+{
+    include_once('controleur/core/logout.php');
 }
 
 if ( isset($_GET['section']) AND $_GET['section'] == 'accueil')
 {
     include_once('controleur/core/accueil.php');
+>>>>>>> 26bbc6f3ec1ea7064e5c2077ee19c2027740d6da
 }
 
 if (!isset($_GET['section']) OR $_GET['section'] == 'index')
