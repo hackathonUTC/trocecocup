@@ -18,8 +18,7 @@ include('vue/core/nav.php');
 		</div>
 	</div>
 </div>
-<!--
+
 <?php
 include('vue/core/footer.php');
 ?>
- -->
