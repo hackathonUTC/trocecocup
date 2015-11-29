@@ -51,7 +51,7 @@ color:#8EDE93;
 	margin: 0 auto;
 	margin-top:-150px;
 	text-align:center;
-	width:800px;
+	width:900px;
 	background: #FFFFFF;
 	border: 1px solid #E0E0E0;
 	border-radius: 2px;
@@ -73,4 +73,10 @@ color:#8EDE93;
 	color:#8EDE93;
 	border: 1px solid #8EDE93;
 	
+}
+
+footer{
+	text-align:center;
+	padding-top:30px;
+	font-size:16px;
 }
