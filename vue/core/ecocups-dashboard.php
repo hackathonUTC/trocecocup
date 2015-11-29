@@ -1,5 +1,3 @@
-
-
 <div id="grid" class="row-fluid">
 
     <span>Filter :</span>
@@ -16,7 +14,9 @@
     </div>
 
     <?php
-      foreach (afficherCups() as $tab)
+      $i = 0;
+      $displayCups = afficherCups();
+      while (isset($displayCups[$i]))
       { ?>
         <div><!--Case ecocup-->
           <div><!--Description ecocup-->
@@ -31,6 +31,7 @@
           </div>
         </div>
     <?php
+        $i++;
       }
     ?>
 
