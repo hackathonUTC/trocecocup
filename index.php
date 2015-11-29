@@ -20,7 +20,7 @@ if ( isset($_GET['section']) AND $_GET['section'] == 'login')
 }
 
 if (!isset($_SESSION['user'])) {
-    include('controleur/core/index.php');
+    include_once('controleur/core/index.php');
 }
 
 if ( isset($_GET['section']) AND $_GET['section'] == 'test')
