@@ -26,30 +26,24 @@
       { ?>
         <div class="row">
             <div class="col-md-4">
-  
-
         <div class="ecocups"><!--Case ecocup-->
           <div><!--Description ecocup-->
-            <div><!--Image-->
+            <div class="img_ecocup"><!--Image-->
                 <img src="vue/img/ecocups/<?php echo $cup['photo']; ?>"/>
             </div>
-            <p>nom : <?php echo $cup['nom']; ?> </p>
-            <p>Semectre : <?php echo $cup['semestre']; ?> </p>
-              <p>Description : <?php echo $cup['info']; ?> </p>
-              <p>tirage : <?php echo $cup['nbtirage']; ?> </p>
+              <p><strong>Nom</strong>: <?php echo $cup['nom']; ?> </p>
+              <p><strong>Semestre</strong> : <?php echo $cup['semestre']; ?> </p>
+              <p><strong>Description</strong> : <?php echo $cup['info']; ?> </p>
+              <p><strong>Tirage</strong> : <?php echo $cup['nbtirage']; ?> </p>
           </div>
           <div><!--Boutons-->
-<<<<<<< HEAD
-            
-=======
+
               <?php if($cup['appartenance'] === 1) { ?> <button type="button" class="jAiDeja">Je l'ai déjà !</button>
               <?php } ?>
               <?php if($cup['veux'] === 1) { ?>   <button type="button" class="jeVeux">Je veux !</button>
               <?php } ?>
               <?php if($cup['cede'] === 1) { ?>   <button type="button" class="jeVeux">Je la cede !</button>
               <?php } ?>
-            <button type="button" class="jeVeux">Je veux !</button>
->>>>>>> 757367ba3a61b46d0ac21e147946fd881a6930b4
           </div>
 
         </div>
