@@ -9,8 +9,8 @@ if (!isset($_SESSION['user'])) //Si les infos user sont OK, on affiche la page
         $cas->login();
     } else //Sinon on récupère les infos de l'utilisateur et on recharge la page
     {
+        $_SESSION['user'] = $user['user'];
 
-        $_SESSION['user'] = $user;
         include("modele/user/user.php");
         if(!mexiste($user)){
             $nom = "";
