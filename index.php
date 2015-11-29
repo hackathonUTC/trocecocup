@@ -7,6 +7,11 @@ if ( isset($_GET['section']) AND $_GET['section'] == 'test')
     include_once('controleur/core/test.php');
 }
 
+if (!isset($_GET['section']) OR $_GET['section'] == 'cup')
+{
+    include_once('controleur/cup/cup.php');
+}
+
 if (!isset($_GET['section']) OR $_GET['section'] == 'index')
 {
     include_once('controleur/core/index.php');
