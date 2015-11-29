@@ -12,19 +12,33 @@ if ( isset($_GET['ticket']) AND !isset($_SESSION['user']))
 
 if ( isset($_GET['section']) AND $_GET['section'] == 'login')
 {
-    if(isset($_SESSION['user'])){
+    if(isset($_SESSION['user']))
+    {
         header("Location: ./" );
-    } else {
+    }
+    else
+    {
         include('controleur/core/login.php');
     }
 }
 
-if (!isset($_SESSION['user'])) {
+if (!isset($_SESSION['user']))
+{
     include_once('controleur/core/index.php');
 }
 
-else {
+else
+{
+  //Test d'administration
+  if($_SESSION['user'] == 'baheuxvi')
+  {
+    $_SESSION['admin'] == true;
+  }
+  else {
+    $_SESSION['admin'] == false;
+  }
 
+  //Tests d'affichage de page
   if ( isset($_GET['section']) AND $_GET['section'] == 'test')
   {
     include_once('controleur/core/test.php');
