@@ -24,7 +24,7 @@
       </div>
     </div>
     <div class="box row">
-      <a href="index.php"><button type="button" class="btn btn-default">Retour à l'accueil</button></a>
+      <a href="<?php echo $accessPath; ?>"><button type="button" class="btn btn-default">Retour à l'accueil</button></a>
     </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
