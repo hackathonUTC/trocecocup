@@ -91,6 +91,9 @@ color:#8EDE93;
 	.box{
 		margin-top:-30px;
 	}
+	.navbar-nav>li>a {
+		text-align:center;
+	}
 }
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 750px) {
