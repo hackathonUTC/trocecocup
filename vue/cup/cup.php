@@ -6,7 +6,7 @@ include('vue/core/nav.php');
 
 <div>
 
-  
+
 </div>
 
 <?php

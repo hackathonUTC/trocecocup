@@ -6,6 +6,7 @@
 }
 
 html{
+	min-width: 350px;
 	font-family: 'Open Sans', sans-serif;
 }
 
@@ -18,7 +19,9 @@ color:#8EDE93;
 .inscription a{
 	color:#8EDE93;
 }
-
+.navbar {
+	min-width: 350px;
+}
 .navbar-nav>li>a{
 	padding-top:8px;
 }
@@ -28,10 +31,13 @@ color:#8EDE93;
 	background-size:cover;
 	height:500px;
 	text-align:center;
+	width:100%;
 }
-
-.headline h1{
+.headline-inside {
 	padding-top:140px;
+}
+.headline h1{
+
 	color:#4E637A;
 	font-size:60px;
 	font-family: 'Open Sans', sans-serif;
@@ -49,9 +55,8 @@ color:#8EDE93;
 
 .box{
 	margin: 0 auto;
-	margin-top:-150px;
 	text-align:center;
-	width:900px;
+
 	background: #FFFFFF;
 	border: 1px solid #E0E0E0;
 	border-radius: 2px;
@@ -73,6 +78,28 @@ color:#8EDE93;
 	color:#8EDE93;
 	border: 1px solid #8EDE93;
 	
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 750px) {
+	.box {
+		margin-top: -150px;
+		width:80%;
+	}
+}
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+	.box {
+		margin-top: -150px;
+		width:900px;
+	}
+}
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+	.box {
+		margin-top: -150px;
+		width:900px;
+	}
 }
 
 footer{
