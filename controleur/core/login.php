@@ -11,10 +11,13 @@ if (!isset($_SESSION['user'])) //Si les infos user sont OK, on affiche la page
     {
 
         $_SESSION['user'] = $user;
-
-        include("controleur/user/user.php");
-        $nom = "";
-        $prenom = "";
+        include("modele/user/user.php");
+        if(!mexiste($user)){
+            $nom = "";
+            $prenom = "";
+            $mail = "";
+            mnouvel_user($user, $nom, $prenom, $mail, "");
+        }
 
 
         unset($_GET['ticket']);
