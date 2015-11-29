@@ -1,6 +1,6 @@
 <div id="grid" class="row-fluid">
 
-    <div class="tri"">
+    <div class="tri">
     <div class="cat">FILTRES'</div>
     <div class="filter-options">
         <?php

@@ -1,6 +1,6 @@
 
-    <div class="container cat">
-    STAT'
+    <div class=" cat">
+    STATS'
     </div>
 
     <div class="stat-element1">
