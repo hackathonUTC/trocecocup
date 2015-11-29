@@ -1,5 +1,7 @@
 <?php
 
+include("modele/proposition/proposition.php");
+
 function mnouvelle_prop($liste1, $liste2, $etat, $date){
 	global $mysqli;
 	$query = "INSERT INTO `proposition`(`liste1`, `liste2`, `etat`, `date`) 

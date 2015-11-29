@@ -11,4 +11,13 @@ function mnouvel_user($login, $nom, $prenom, $localisation){
 	else return 0;
 }
 
+function mexiste($login){
+	global $mysqli;
+	$query = "SELECT $nom FROM user WHERE user.login = $login";
+	if ($result = mysqli_query($mysqli, $query) && mysql_num_rows($result) == 1 ) {
+		return 1;
+	}
+	else return 0;
+}
+
 ?>
