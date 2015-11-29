@@ -14,12 +14,13 @@
             ?>
         </ul>
     </div>
+    
   
 
     <?php
       foreach (afficherCups() as $tab)
       { ?>
-        <div><!--Case ecocup-->
+        <div class="ecocups"><!--Case ecocup-->
           <div><!--Description ecocup-->
             <div><!--Image-->
               <img src="vue/img/ecocups/<?php echo $tab['photo']; ?>"/>
