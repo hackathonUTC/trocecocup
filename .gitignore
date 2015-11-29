@@ -4,3 +4,4 @@
 **/.DS_Store
 ./modele/core/connexion_sql.php
 ./config.php
+.idea/workspace.xml
