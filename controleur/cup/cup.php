@@ -6,8 +6,7 @@ function afficherCups()
 	include('modele/listes/listes.php');
 	$user = $_SESSION["user"];
 	$result = getAllCups();
-	var_dump($result);
-	die;
+	
 	$ecocup = mysqli_fetch_assoc($result);
 	if ($ecocup) {
 		$appartenance = listetypee($user, "collection");
