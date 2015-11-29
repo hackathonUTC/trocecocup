@@ -17,5 +17,8 @@
   <script src="includes/jquery/js/jquery.js"></script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
   <script src="includes/bootstrap/js/bootstrap.min.js"></script>
+  <script src="includes/Shuffle-master/jquery.shuffle.min.js"></script>
+  <script src="includes/shuffleUs.js"></script>
+
 </head>
 <body>

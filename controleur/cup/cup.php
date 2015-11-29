@@ -50,10 +50,11 @@ function afficherCups()
 
 function afficherAsso(){
 	$result = getAllAsso();
+	$assos = array();
 	while($row = mysqli_fetch_assoc($result)){
-		$nom = $row["asso"];
-		echo("<li><a href=\"#\"> $nom </a></li>");
+		$assos[] = $row["asso"];
 	}
+	return $assos;
 }
 
 function affAsso(){
